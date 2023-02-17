@@ -1,0 +1,19 @@
+[package]
+name = "taxonomy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+flate2 = { workspace = true }
+serde = { workspace = true }
+reqwest = { workspace = true, features = ["blocking"] }
+anyhow = { workspace = true }
+tar = "0.4.38"
+common = { path = "../common" }
+serde_json = "1.0.93"
+sqlx = { version = "0.6.2", features = ["sqlite", "runtime-tokio-native-tls"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
